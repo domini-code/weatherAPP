@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="card__image">
+    <img src="{{BASE_URL}}/{{weather.weather[0].icon}}@2x.png" [alt]="weather.name">
+  </div>
+  <div class="card__main"> {{weather.weather[0].main}} </div>
+  <div class="card__city"> {{weather.name}} , {{weather.sys.country}} / {{weather.main.temp | number:'1.0-0'}}&#8451;
+  </div>
+  <div class="card__stats">
+    <div class="card__stat width-33">
+      <div class="card__stat--stat">{{weather.main.pressure}} <sup>hPa</sup></div>
+      <div class="card__stat--name">Pressure</div>
+    </div>
+    <div class="card__stat width-33">
+      <div class="card__stat--stat">{{weather.main.humidity}}<sup>%</sup></div>
+      <div class="card__stat--name">Humidity</div>
+    </div>
+    <div class="card__stat width-33 no-border">
+      <div class="card__stat--stat">{{weather.wind.speed}} <sup>m/s</sup></div>
+      <div class="card__stat--name">Wind</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,79 @@
+@import 'variables';
+
+.card {
+  background-color: $white;
+  margin-top: 2rem;
+  border-radius: $border-radius-size;
+  box-shadow: -0.063rem 1rem 1.875rem -1rem $black;
+
+  .card__image {
+    position: relative;
+    height: 15rem;
+    margin-bottom: 2.188rem;
+    border-top-left-radius: $border-radius-size;
+    border-top-right-radius: $border-radius-size;
+    background: url('/assets/images/ny_city.jpeg');
+
+    img {
+      position: absolute;
+      top: -1.5rem;
+      right: -1.5rem;
+    }
+  }
+
+  .card__main {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    color: $main-color;
+    padding: 0 1rem;
+  }
+
+  .card__city {
+    font-size: 2rem;
+    color: $black;
+    font-weight: 900;
+    padding: 1rem;
+  }
+
+  .card__stats {
+    background-color: $main-color;
+    color: $white;
+    font-weight: 700;
+    border-bottom-left-radius: $border-radius-size;
+    border-bottom-right-radius: $border-radius-size;
+    display: flex;
+    justify-content: space-evenly;
+
+    .card__stat {
+      padding: 1.25rem 1rem;
+      text-align: center;
+      border-right: 0.063rem solid $black;
+
+      &--stat {
+        position: relative;
+        font-size: 1.5rem;
+        margin-bottom: 0.625rem;
+      }
+
+      &--name {
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 0.75rem;
+        color: $black;
+      }
+    }
+
+
+    sup {
+      position: absolute;
+      bottom: 0.25rem;
+      font-size: 45%;
+      margin-left: 0.125rem;
+    }
+
+    .no-border {
+      border-right: none;
+    }
+  }
+}
